@@ -1,0 +1,32 @@
+dependecies:
+----------------------
+1.implicit dependices
+2.explicit dependecies
+
+  we will use depends on for explicit dependcy.if you explicitly defning here it has to create after something has been created.
+  
+  https://www.terraform.io/docs/language/meta-arguments/depends_on.html
+
+every resource code contain 
+
+  1.arugumnet reference:
+  ------------------------
+     if you want craete any resource what all inputs you can use is called argument reference( at the timr of creating the resource)
+        
+     
+  2.attribute reference:
+  ---------------------------
+   after creating any resource it will export somethings.if you want use
+   
+   
+   if apply destroy it is going destroy all the infrastructure what you create.if you want destroy everything except some bucket or any resource then that from the tfstate file and 
+   comment out that code.
+   
+   terraform state list----it will show all it has created
+   
+   terraform state
+   
+   terraform state rm <any resource name that you want to keep>
+   ----------------------------------------------------------------
+   
+   
