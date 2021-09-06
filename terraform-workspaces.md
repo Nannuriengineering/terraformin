@@ -33,6 +33,8 @@
    you deployed an infrastrcture using terraform.but later you created any ec2 or any resource manuvally.the terraform doesnot about that .so if you try to destroy infastrucure 
    it wont delete the infrastructure because the resource is there inside that infrastructure that you have created manually.
    
+  
+   
    so you have to import that resource to terraform
    
    terraform state list
@@ -49,6 +51,12 @@
     1.create_before_destroy
     2.prevent_destroy 
     3.ignore_changes 
+    
+    
+  terraform apply on specific resource:
+  -------------------------------------
+  
+  https://learn.hashicorp.com/tutorials/terraform/resource-targeting
     
     
    
