@@ -19,7 +19,7 @@ every resource code contain
    after creating any resource it will export somethings.if you want use
    
    
-   if apply destroy it is going destroy all the infrastructure what you create.if you want destroy everything except some bucket or any resource then that from the tfstate file and 
+   if apply destroy it is going destroy all the infrastructure what you created.if you want destroy everything except some bucket or any resource then that from the tfstate file and 
    comment out that code.
    
    terraform state list----it will show all it has created
@@ -28,5 +28,28 @@ every resource code contain
    
    terraform state rm <any resource name that you want to keep>
    ----------------------------------------------------------------
+   
+   everry resource has contain two things
+   
+    1.resource
+    2.data source
+    
+    if you already created any vpc without terraform if you want create subnets with help of terraforrm use datasource.
+    
+    if yoy have two var files one is terraform.tfvarrs and prod.tfvars.so you have keep two state files,otherwise it will go override the already exsited infrastructure.
+    
+    to solve this problem we will use workspaces.
+    
+    terraform workspace---------it will show all the aruguments.
+    terraform workspace list---it will show all workspaces
+    terraform workspace new prod---------to create a new workspace
+    terraform workspace new dev
+    terraform workspace select <name of the workspace>---------------to go to particular namespace.
+    terraform workspace delete <name of the workspace>
+    
+    
+    
+    
+    
    
    
