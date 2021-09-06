@@ -22,7 +22,8 @@
    
    terraform apply --var-file <name of the varfile>-------dev.tfvars,test.tfvars
    
-   adding userdata to ec2 machine while creating
+   adding userdata to ec2 machine while creating:
+   ----------------------------------------------------
    
    https://www.bogotobogo.com/DevOps/Terraform/Terraform-terraform-userdata.php
    
