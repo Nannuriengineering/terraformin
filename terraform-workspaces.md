@@ -25,7 +25,7 @@
    adding userdata to ec2 machine while creating
    
    https://www.bogotobogo.com/DevOps/Terraform/Terraform-terraform-userdata.php
-   -----------------------------------------------------------------------------------
+   
    
    importing:
    ---------------
