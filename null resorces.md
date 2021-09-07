@@ -79,6 +79,12 @@ to avoid this we will use null resourrce
   host = "${aws_instance.web-1.public_ip}" ------"${element(aws_instance.web-1.*.public_ip,count.index)}"
   }
   }
+   provisioner "local-exec"{
+    command = <<EOH
+      echo "${aws_instances.web-1.public_ip}" >> details && echo "${aws_instances.web-1.private_ip}" >> details
+  EOH
+  }
+
 }  
   
   
@@ -86,3 +92,14 @@ to avoid this we will use null resourrce
   
   terraform taint null_resource.nameof the resource  -------it will destroy the resource and recreate it.
   terraform untaint <resourcename>
+  
+  local_exec:
+  -------------------------
+  
+  it will execute where terraform exitst.where as remote exec execute the ec2 macine
+  
+  provisioner "local-exec"{
+    command = <<EOH
+      echo "${element(aws_instances.web-1.*.public_ip,count.index}" >> details && echo "${element(aws_instances.web-1.*.private_ip,count.index}" >> details,
+  EOH
+  }
