@@ -71,6 +71,10 @@ to avoid this we will use null resourrce
   inline = [
     "chmod +x /tmp/script.sh",
     "sudo /tmp/script.sh",
+    "sudo useradd -m testuser",
+    "sudo mkdir /home/testuser/.ssh"
+   "sudo cat /tmp/public_key >> /home/testuser/.ssh/authorized_keys"
+   "sudo chown testuser:testuser /home/testuser/.ssh"
     ]
     connection {
   type = "ssh"
@@ -103,3 +107,5 @@ to avoid this we will use null resourrce
       echo "${element(aws_instances.web-1.*.public_ip,count.index}" >> details && echo "${element(aws_instances.web-1.*.private_ip,count.index}" >> details,
   EOH
   }
+  
+  
